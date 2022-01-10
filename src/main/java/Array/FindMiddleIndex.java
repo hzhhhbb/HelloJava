@@ -2,23 +2,17 @@ package Array;
 
 import java.util.Arrays;
 
+
 public class FindMiddleIndex {
     public int findMiddleIndex(int[] nums) {
-        if (nums.length <= 0) return 0;
-
-        long leftSum = 0;
-        long rightSum = Arrays.stream(nums).sum();
-        for (int i = 0; i < nums.length; i++) {
-            if (leftSum - nums[i] == rightSum) {
+        int total = Arrays.stream(nums).sum();
+        int sum = 0;
+        for (int i = 0; i < nums.length; ++i) {
+            if (2 * sum + nums[i] == total) {
                 return i;
             }
-            if (leftSum == rightSum - nums[i]) {
-                return i;
-            }
-            leftSum += nums[i];
-            rightSum -= nums[i];
+            sum += nums[i];
         }
-
         return -1;
     }
 }

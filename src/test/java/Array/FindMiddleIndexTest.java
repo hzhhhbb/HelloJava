@@ -43,4 +43,14 @@ class FindMiddleIndexTest {
         System.out.println(actualValue);
         assert expectValue == actualValue;
     }
+
+    @Test
+    void findMiddleIndex4() {
+        FindMiddleIndex runner = new FindMiddleIndex();
+        int[] nums = new int[]{-1,2};
+        int expectValue = -1;
+        int actualValue = runner.findMiddleIndex(nums);
+        System.out.println(actualValue);
+        assert expectValue == actualValue;
+    }
 }
