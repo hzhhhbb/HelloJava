@@ -21,4 +21,12 @@ class RomanToIntegerTest {
         int actualResult=RomanToInteger.romanToInt(s);
         assert expectResult==actualResult;
     }
+
+    @Test
+    void romanToInt2() {
+        String s="MMMCMXCIV";
+        int expectResult=3994;
+        int actualResult=RomanToInteger.romanToInt(s);
+        assert expectResult==actualResult;
+    }
 }
